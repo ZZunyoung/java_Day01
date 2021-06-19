@@ -5,8 +5,8 @@ import javax.swing.plaf.synth.SynthOptionPaneUI;
 public class Day01_과제 {
 	//과제1 : 고양이 출력하기
 	/*
-	 	\   /\
-	 	 )  (')
+	 	\	/\
+	 	 )	(')
 	 	(  /  )
 	 	 \(__)|
 	 */
