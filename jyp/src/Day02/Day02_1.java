@@ -69,12 +69,22 @@ public class Day02_1 {// c s
 		System.out.println(a);		//			20
 		
 		// 문제3 : 365,420원의 지폐수 세기
+		
+		// 변수 : 메모리 [ 데이터 저장소 ]
 		int b = 365420;
 		System.out.println("십만원권 : " + (b/100000) + "장");
 		System.out.println("만원권  : " + ((b-(b/100000)*100000)/10000)+"장");
 		System.out.println("천원권  : " + ((b-(b/10000)*10000)/1000)+"장");
 		System.out.println("백원 개수 : " + ((b-(b/1000)*1000)/100)+"개");
 		
+		
+		System.out.println("십만원권 : " + (b/100000) +"장");
+		b-=(b/100000)*100000;
+		System.out.println("만원권 : " + (b/10000)+"장");
+		b-=(b/10000)*10000;
+		System.out.println("천원권 : " + (b/1000)+"장");
+		b-=(b/1000)*1000;
+		System.out.println("백원 : " + (b/100)+"장");
 		
 	}
 }// c e 
