@@ -152,6 +152,18 @@ public class Day04_2 {
 			System.out.println("*");
 			
 		}
+//		System.out.print("문제10 정수 입력 : ");
+//		int 문제10 = scanner.nextInt();
+//		for (int i = 1 ; i <=문제10 ; i ++) { // i = 행 = 가로
+//			for (int j = 1 ; j<=문제10 ;j++) { // j = 열 = 세로
+//				// 행 = 열 동일한 경우 별찍기
+//				if ( i == j ) System.out.print("*");
+//				else if (i+j==문제10+1) System.out.print("*");
+//				else System.out.print(" ");
+//			}
+//			System.out.println();
+//		}
+		
 		
 	}
 }
