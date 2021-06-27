@@ -9,7 +9,7 @@ public class Day02_2 {
 				// 변수 형태 : 
 					// 사람 : 문자		int 변수명;
 					// 컴퓨터 : 숫자	메모리크기 주소값;
-<<<<<<< HEAD
+
 			// 3. 자료형 : 미리 정의된 메모리 크기 [ 메모리 효율적 => 속도 빠름 ]
 				// 1비트 : 0, 1
 				// 1byte : 8비트 => 0혹은1이 8자리
@@ -65,8 +65,6 @@ public class Day02_2 {
 		
 		String 문자열객체 = "배고파";
 		System.out.println("String 객체 : " + 문자열객체);
-=======
->>>>>>> refs/remotes/origin/master
 		
 	}
 }
