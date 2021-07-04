@@ -91,13 +91,12 @@ public class Day06_2 {
 										break;
 									}
 								}
-								System.out.println("\n [ 회원탈퇴 ] 회원탈퇴 되었습니다.");
+								System.err.println("\n [ 회원탈퇴 ] 회원탈퇴 되었습니다.");
 								break;
 							}
 							if (선택2 == 2) {
 								System.out.print("변경할 비밀번호를 입력해주세요 : ");
-								String 비밀번호2 = scan.next();
-								회원목록[i][1]=비밀번호2;
+								회원목록[i][1]=scan.next();
 								System.err.println("\n [ 비밀번호 변경 ] 비밀번호가 변경되었습니다.");
 								
 							}
