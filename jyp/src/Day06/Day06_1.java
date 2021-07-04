@@ -55,16 +55,24 @@ public class Day06_1 {
 				}
 				
 				// 가장 높은 점수 출력
-				System.out.println("가장 높은 점수 : " + 학생점수[0]);
-				// 평균 출력
-				int 평균 = 0;
-				for (int i = 0 ; i<학생점수.length ; i++) {
-					평균 += 학생점수[i];
+				int max = 0;
+				int sum = 0;
+				for ( int i = 0 ; i < 학생점수.length ; i++) {
+					// 최댓값
+					if (max < 학생점수[i])max = 학생점수 [i];
+					// 누적합계
+					sum += 학생점수[i];
 				}
-				System.out.println("평균 : " + 평균/학생점수.length);
+				// 최댓값 / 평균 출력
+				
+				System.out.println("평균 : " + sum/학생점수.length);
 			}
-			if (선택 == 4) {}
-			else {}
+			if (선택 == 4) {
+				break;
+			}
+			else {
+				System.out.println("다시 입력해 주세요.");
+			}
 			
 			
 		} // while end
