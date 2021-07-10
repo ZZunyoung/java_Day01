@@ -1,5 +1,8 @@
 package Day07;
 
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+
 public class Member {
 
 	
@@ -68,6 +71,21 @@ public class Member {
 		
 		// 회원가입 성공
 		System.out.println("[성공] 회원가입에 성공했습니다.");
+		try {
+			FileOutputStream fileOutputStream = new FileOutputStream("c:/java/memberlist.txt");
+			// 리스트내 모든 회원을 파일에 저장
+			// 리스트의 for문 활용
+			for (Member temp : Day07_2_Start.member) {
+				// for ( 임시 객체명 : 리스트명 ) : 리스트내 모든 객체를 임시객체에 하나씩 대입
+				// 회원정보를 하나의 문자열로 변환 [ 필드구분 , // 회원[객체] 구분 \n
+				String 회원정보 = temp.아이디+","+temp.비밀번호+","+temp.이름+","+
+				temp.성별+","+temp.이메일+","+temp.전화번호+","+temp.포인트+","+
+				temp.등급+"\n";
+				fileOutputStream.write(회원정보.getBytes());
+			}
+		} catch (Exception e) {
+			System.out.println("올바르지 않은 값입니다.");
+		}
 	}
 	// 2. 로그인 메소드
 	public void 로그인() {

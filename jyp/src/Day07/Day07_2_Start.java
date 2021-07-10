@@ -14,6 +14,7 @@ public class Day07_2_Start {
 			//<제네릭> : 리스트객체에 담을 객체의 클래스
 				// 리스트명.add(객체명) : 리스트에 객체 담기
 				// 리스트명.size() : 리스트내 객체 수
+	
 				// 리스트명.get(인덱스 번호) : 리스트내 인덱스 번호에 해당하는 객체 호출
 	public static void main(String[] args) {
 		
