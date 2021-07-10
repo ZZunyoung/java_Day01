@@ -1,5 +1,7 @@
 package Day07;
 
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -73,6 +75,27 @@ public class Day07_1 {
 				
 				temp1.나이업데이트(40);
 				System.out.println(temp1.나이);
+				
+				// 파일처리
+					// 스트림 : 외부장치와 데이터 통신
+						// !!! : 데이터 통신 단위 : 바이트
+							// bit[0,1] => 8bit => 1바이트
+					// 1. 내보내기 [ FileOutputStream 클래스 [
+				try { // try 안에서 예외[오류] 발생시 => catch 이동
+						// try 안에서 예외가 없을경우는 그대로 실행
+					
+					FileOutputStream fileOutputStream = new FileOutputStream("c:/java/test.txt");
+					
+					String 문자열 = "자바입니다."; // 문자열
+					fileOutputStream.write(문자열.getBytes()); // 문자열이 문자열이 아닌경우
+						//write(바이트) : 출력[내보내기] 
+							// 문자열.getBytes() : 문자열 => 바이트
+				} catch (Exception e) { // Exception : 모든 예외 처리 클래스
+					System.out.println("파일경로가 존재하지 않습니다.");
+				}
+						// 예외처리 : 오류 발생시 => 오류 처리 경우의 수
+				
+					// 2. 읽어오기
 			}
 			
 			
