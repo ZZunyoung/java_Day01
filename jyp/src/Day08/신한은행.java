@@ -29,7 +29,7 @@ public class 신한은행 extends 계좌 {
 		System.out.print("계좌번호를 입력하세요 XXX-XXX-XX-XXXXXX : "); // 제어 : 중복제거
 		String 계좌번호 = Day08_7_ATM.scanner.next();
 		for(계좌 temp : Day08_7_ATM.계좌목록) {
-			if(temp.get계좌번호().equals(계좌번호)) {
+			if(temp.get계좌번호().equals(계좌번호)){
 				System.err.println("[실패] : 동일한 계좌번호가 존재합니다.");
 				return; // 메소드 종료  : 메소드 반환 : 반환데이터 없음 
 			}
