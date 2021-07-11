@@ -36,6 +36,7 @@ public class 계좌 {
 	public void 입금처리(int 입금액) {
 		this.금액 +=입금액;
 		System.err.println("[완료] 입금처리가 완료되었습니다.");
+		System.out.println("현재 잔고 : " + this.금액);
 	}
 	public void 출금처리 (int 출금액) {
 		if (출금액>this.금액) {
@@ -44,6 +45,7 @@ public class 계좌 {
 		}
 		this.금액 -= 출금액;
 		System.err.println("[완료] 출금처리가 완료되었습니다.");
+		System.out.println("현재 잔고 : " + this.금액);
 	}
 	public void 계좌생성() {
 		System.out.println("계좌번호를 입력하세요 XXX-XXX-XX-XXXXXX : ");
@@ -98,7 +100,33 @@ public class 계좌 {
 	}
 	
 	public void 이체() {
+		System.out.println("------ 이체 화면 ------");
+		System.out.print("계좌번호를 입력하세요 XXX-XXX-XX-XXXXXX : ");
+		String 계좌번호 = Day08_7_ATM.scanner.next();
+		System.out.print("비밀번호 네자리를 입력하세요 : ");
+		int 비밀번호 = Day08_7_ATM.scanner.nextInt();
+		for (계좌 temp : Day08_7_ATM.계좌목록) {
+			if (temp.get계좌번호().equals(계좌번호)&&temp.get비밀번호()==비밀번호) {
+		System.out.print("이체 금액 : ");
+		int 이체금액 = Day08_7_ATM.scanner.nextInt();
+		if (temp.금액 < 이체금액) {
+			System.err.println("[오류] 예금액이 부족합니다.");
+			return;
+		}
+		System.out.println("받으시는분의 계좌번호 : ");
+		String 계좌번호2 = Day08_7_ATM.scanner.next();
 		
+		for (계좌 temp2 : Day08_7_ATM.계좌목록) {
+			if (temp2.계좌번호.equals(계좌번호2)){
+				temp2.금액 += 이체금액;
+				System.err.println("[완료] 이체에 성공했습니다.");
+				return;
+			}
+			System.err.println("[실패] 계좌번호나 비밀번호가 다릅니다.");
+		}
+			}
+
+		}
 	}
 	
 	public void 계좌찾기() {

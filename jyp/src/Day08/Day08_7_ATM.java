@@ -43,7 +43,12 @@ public class Day08_7_ATM {
 				}
 			}
 			else if(선택 == 4) {
-	
+				System.out.print("1. 신한은행 2. 국민은행 : ");
+				int 선택2 = scanner.nextInt();
+				if (선택2 == 1) {
+					신한은행 신한은행 = new 신한은행();
+					신한은행.이체();
+				}
 			}
 			else if(선택 == 5) {
 	
