@@ -17,8 +17,7 @@ public class 관리자 extends 회원{
 	@Override
 	public void 정보() {
 		super.정보();
-		System.err
-		.println("회원 권한 : "+this.권한);
+		System.err.println("회원 권한 : "+this.권한);
 	}
 	
 	
