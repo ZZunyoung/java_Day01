@@ -45,7 +45,7 @@ public class Member {
 	public void 회원가입() {
 		// 입력받기 
 		System.out.println("[[[ 회원가입 화면 ]]]");
-		System.out.print("아이디 : "); String 아이디 = Day07_2_Start.sc.next();
+		System.out.print("아이디 : "); String 아이디 = Day07_2_Start.scanner.next();
 			// 아이디 중복체크
 		for(int i = 0;i<Day07_2_Start.members.size();i++) {
 			
@@ -56,10 +56,10 @@ public class Member {
 				return; // 메소드 종료  : 메소드 반환 : 반환데이터 없음 
 			}
 		}
-		System.out.print("비밀번호 : ");String 비밀번호 = Day07_2_Start.sc.next();
-		System.out.print("이름 : ");String 이름 = Day07_2_Start.sc.next();
-		System.out.print("성별 : [남자: 1 여자: 2 미설정: 0] ");int 성별 = Day07_2_Start.sc.nextInt();
-		System.out.print("휴대전화 [ - 제외 ]: ");int 휴대전화 = Day07_2_Start.sc.nextInt();
+		System.out.print("비밀번호 : ");String 비밀번호 = Day07_2_Start.scanner.next();
+		System.out.print("이름 : ");String 이름 = Day07_2_Start.scanner.next();
+		System.out.print("성별 : [남자: 1 여자: 2 미설정: 0] ");int 성별 = Day07_2_Start.scanner.nextInt();
+		System.out.print("휴대전화 [ - 제외 ]: ");int 휴대전화 = Day07_2_Start.scanner.nextInt();
 		
 		// 객체 만들기 
 		Member member = new Member(아이디, 비밀번호, 이름, 성별, 휴대전화);
