@@ -6,5 +6,7 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="C:/Users/jyp86/Downloads/mail-1.4.7.jar"/>
+	<classpathentry kind="lib" path="C:/Users/jyp86/Downloads/activation.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
