@@ -33,6 +33,9 @@ public class 계좌 {
 		return this.비밀번호;
 	}
 	
+	public String get계좌주() {
+		return this.계좌주;
+	}
 	public void 입금처리(int 입금액) {
 		this.금액 +=입금액;
 		System.err.println("[완료] 입금처리가 완료되었습니다.");
@@ -130,7 +133,17 @@ public class 계좌 {
 	}
 	
 	public void 계좌찾기() {
-		
+		System.out.println("------ 계좌 찾기 화면 ------");
+		System.out.print("계좌주를 입력하세요 : ");
+		String 계좌주 = Day08_7_ATM.scanner.next();
+		for (계좌 temp : Day08_7_ATM.계좌목록) {
+			if (temp.get계좌주().equals(계좌주)) {
+				System.out.println(계좌주 + "님의 계좌 : " + temp.get계좌번호());
+				return;
+			}
+			
+		}
+		System.err.println("[오류] 계좌를 찾지 못하였습니다.");
 	}
 
 }
