@@ -84,6 +84,38 @@ public class Day11_4 {
 			}
 		}
 		
+		// 예4) 소규모 스레드 인터페이스
+		
+		Thread thread3 = new Thread(new Runnable() {
+			
+			@Override
+			public void run() {
+				Toolkit toolkit = Toolkit.getDefaultToolkit();
+				// 경고음 메소드 관련 제공해주는 클래스
+			
+			for(int i = 0 ; i<5 ; i++) {
+				toolkit.beep(); // 경고음
+					// 소리가 1번 실행되기 전에 for문이 먼저 5번 회전
+				
+				// 스레드 1초간 일시정지
+				try {
+					Thread.sleep(1000);
+				} catch (InterruptedException e) {
+				} 
+				
+			}
+			}
+		});
+		
+		thread3.start();
+		for (int i = 0 ; i<5;i++) {
+			System.out.println("띵");
+			try {
+				Thread.sleep(1000);
+			}catch(InterruptedException e) {
+				
+			}
+		}
 		
 		
 		
