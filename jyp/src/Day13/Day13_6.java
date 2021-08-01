@@ -1,5 +1,7 @@
 package Day13;
 
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Stack;
 
 public class Day13_6 {
@@ -42,6 +44,31 @@ public class Day13_6 {
 		System.out.println(temp.동전);
 	}
 
+	// 2. Queue 인터페이스
+	Queue<동전> 동전상자2 = new LinkedList<>();
+	
+	동전상자2.offer(new 동전(100));
+	동전상자2.offer(new 동전(200));
+	동전상자2.offer(new 동전(300));
+	
+	System.out.println("동전 상자 : " + 동전상자2);
+	System.out.println("동전 상자의 동전수 : " + 동전상자2.size());
+	
+	// 출력
+	for( 동전 temp : 동전상자2) {
+		System.out.println(temp +"/"+ temp.동전);
+	}
+	
+	// 삭제
+	동전상자2.poll(); // 삭제 [ 먼저 들어온 데이터 순으로 삭제 ]
+	
+	for( 동전 temp : 동전상자2) {
+		System.out.println(temp +"/"+ temp.동전);
+	}
+	while(!동전상자2.isEmpty()) {
+		동전 삭제된동전 = 동전상자2.poll();
+		System.out.println("꺼낸 동전 : " + 삭제된동전.동전 );
+	}
 	
 	
 	
