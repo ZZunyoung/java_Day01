@@ -1,6 +1,8 @@
 package Day13;
 
 import java.util.HashMap;
+import java.util.Hashtable;
+import java.util.Properties;
 
 public class Day13_3 {
 
@@ -8,9 +10,15 @@ public class Day13_3 {
 	
 		// Map : < 키, 값 > 으로 이루어진 한쌍 = 엔트리
 			// 인덱스 없음
-			// 1. HashMap 2. HashTable
+			// 1. HashMap 동기화 x 2. HashTable 동기화 o
 			// 메소드
 				// 1. .put(키,값) : 엔트리 추가
+				// 2. .get(키) : 키에 해당하는 값 호출
+				// 3. .remove(키) : 키에 해당하는 키/값[엔트리] 삭제
+				// 4. .keySet() : 모든키를 리스트로 반환
+				// 5. .values() : 모든 값을 리스트로 반환
+				// 6. .size() : 엔트리 수
+				// 7. .clear() : 모든 엔트리 삭제
 		
 		// 1. HashMap 선언
 		HashMap<String, Integer> hashMap = new HashMap<>();
@@ -36,6 +44,19 @@ public class Day13_3 {
 		}
 		hashMap.clear();
 		System.out.println("hashMap 출력 : " + hashMap);
+		
+		// 1. HashTable 선언
+		Hashtable<String, Integer> hashtable = new Hashtable<>();
+		hashtable.put("유재석", 80);
+		hashtable.put("강호동", 70);
+		hashtable.put("신동엽", 60);
+		hashtable.put("유재석", 80); // 동일한 키는 중복 불가능 [ key = 중복 불가능 ]
+		hashtable.put("서장훈", 80); // 동일한 값은 중복 가능 [ value = 중복 가능 ]
+		
+		System.out.println("hashtable 출력 : " + hashtable);
+		
+		
+		
 		
 
 	}
